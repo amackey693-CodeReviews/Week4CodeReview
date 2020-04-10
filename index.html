@@ -11,18 +11,15 @@
     <div class="container">
      <div class="row">
        <div class="col">
-          <div class = "card">
+          <div class = "jumbotron">
             <h3>Welcome Allison's Pizza Parlor!</h3>
             <p><em>Where Pizza Dreams Come True</em></p>
           </div>
-          <br>
-          <!-- BUTTON: MENU (only displays once "order-pizza" is clicked) -->
-          <button type="button" id="menu" class = "btn btn-dark">The Menu</button>
-          <br>
-          <br>
+         
            <!-- PIZZA MENU -->
           <div id= "pizza-menu" class ="card">
             <h1>The Menu!</h1>
+            <hr>
             <div class="col">
               <h4>Pick a Size:</h4>
               <div class="row">
@@ -40,6 +37,7 @@
                 </div>
               </div>
             </div>
+            <hr>
             <h4>Meat Lovers Pizza</h4>
             <p>Red sauce, mozzarella, pepperoni, canadian style bacon, salami, & fresh italian sausage</p>
             <p>Small $16.00 | Medium $20.00 | Large $26.00 | Extra Large $30.00</p>
@@ -65,8 +63,11 @@
             <button type="button" id="order-pizza" class = "btn btn-dark">Place An Order!</button>
             <br>
           </div>
-          
-          <div id="order">
+           <!-- BUTTON: MENU (only displays once "order-pizza" is clicked) -->
+           <button type="button" id="menu" class = "btn btn-dark">The Menu</button>
+           <br>
+           <br>
+          <div id="order" class="card">
             <form class="pizza">
                <!-- User Information for Order -->
               <h4>Delivery Information </h4>
@@ -150,10 +151,10 @@
           </div>
           <br> 
           <!-- Display to user once order is completed: -->
-          <div id="pizza-output">
-
+          <div id="pizza-output" class="card">
+        
           </div>
-          <div id="delivery-info">
+          <div id="delivery-info" class ="card">
             <p>Order Name: <span class="first-name"></span> <span class="last-name"></span></p>
             <p>Contact Number: <span class = "phone-number"></span></p>
             <p>Delivery Address: </p>

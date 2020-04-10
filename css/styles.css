@@ -4,21 +4,34 @@
 .card {
   padding: 15px;
   text-align: left;
-}
-
-.header {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  background-color: lightcoral;
+  background-color:#d1d1d1;
   opacity: 90%;
 }
 
-body {
-
+.jumbotron {
+  padding: 15px;
+  background-color: #d1d1d1;
+  opacity: 95%;
+  text-align: center;
 }
+
+body {
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  background-image: url(https://media.giphy.com/media/w0CJXS2M44xfW/giphy.gif);
+  background-image: repeat;
+  background-size: 200px;
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+}
+
 #order {
   display: none;
   text-align: left;
+  background-color:#d1d1d1;
+  opacity: 90%;
 }
 
 #menu {
@@ -27,6 +40,10 @@ body {
 
 #extra-toppings {
   display: none;
+}
+
+#pizza-output {
+  display:none;
 }
 
 #delivery-info {
