@@ -73,7 +73,7 @@ $(document).ready(function(){
     var phoneNumber = $("#phone-number").val();
     var streetAddress = $("#street-address").val();
     var cityStateZip = $("#city-state-zip").val();
-    var deliveryInfo = new DeliveryInfo (firstName, lastName, phoneNumber, streetAddress, cityStateZip)
+    // var deliveryInfo = new DeliveryInfo (firstName, lastName, phoneNumber, streetAddress, cityStateZip)
 
     $(".first-name").html(firstName);
     $(".last-name").html(lastName);
@@ -84,7 +84,8 @@ $(document).ready(function(){
     // Button for SUBMITTING ORDER
     $("button#submit-order").click(function(){
       $("#order").hide();
-      $("#pizza-output").html("<p> Your Total Will Be:  $" + price + ".00 </p>")
+      $("#pizza-output").show();
+      $("#pizza-output").html("<h3> Your Total Will Be:  $" + price + ".00 </h3>")
       $("#delivery-info").show();
     });
 
@@ -96,7 +97,9 @@ $(document).ready(function(){
   // Button for MENU DISPLAY
   $("button#menu").click(function(){
     $("#pizza-menu").slideToggle("slow");
-  });
+    $("#pizza-output").hide();
+    $("#delivery-info").hide() 
+   });
   // Button for PLACE ORDER
   $("button#order-pizza").click(function(){
     $("#order").slideToggle("slow");
