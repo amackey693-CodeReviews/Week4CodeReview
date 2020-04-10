@@ -10,33 +10,38 @@
   </head>
   <body>
     <div class="container">
-      <div class="well">  
-        <form class="pizza">
-          <!-- Drop Down Menu for Pizza Size -->
-          <label for="pizza-size">What size would you like?</label>
-          <select class="form-control" id="pizza-size">
-            <option value=""></option>
-            <option value="sm">Small</option>
-            <option value="md">Medium</option>
-            <option value="lg">Large</option>
-            <option value="xl">Extra Large</option>
-          </select>
-          <!-- Drop Down Menu for Pizza Type -->
-          <label for="pizza-type">What kind of pizza would you like?</label>
-          <select class="form-control" id="pizza-type">
-            <option value=""></option>
-            <option value="cheese">Cheese</option>
-            <option value="pepperoni">Pepperoni</option>
-            <option value="hawaiian">Hawaiian</option>
-            <option value="meat lovers">Meat Lovers</option>
-          </select>
-          <br>
-          <button type="submit" class="btn btn-dark">Order Now!</button>
-        </form>
-        <br>
-        <div class="well" id="output">
+      <div class = "jumbotron">
+        <h2>Welcome to a taste of Italy!</h2>
+      </div>
+      <form class="pizza">
+        <!-- Drop Down Menu for Pizza Size -->
+        <label for="pizza-size">What size would you like?</label>
+        <select class="form-control" id="pizza-size">
+          <option value=""></option>
+          <option value="sm">Small</option>
+          <option value="md">Medium</option>
+          <option value="lg">Large</option>
+          <option value="xl">Extra Large</option>
+        </select>
+        <!-- Drop Down Menu for Pizza Type -->
+        <label for="pizza-type">What kind of pizza would you like?</label>
+        <select class="form-control" id="pizza-type">
+          <option value=""></option>
+          <option value="cheese">Cheese</option>
+          <option value="pepperoni">Pepperoni</option>
+          <option value="hawaiian">Hawaiian</option>
+          <option value="meat lovers">Meat Lovers</option>
+        </select>
+        <!-- Button & Checkbox for Extra Toppings GOES HERE -->
+        <div id = "extra-toppings">
 
         </div>
+        <br>
+        <button type="submit" class="btn btn-dark">Order Now!</button>
+      </form>
+      <br>
+      <div id="output">
+
       </div>
     </div>
   </body> 

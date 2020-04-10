@@ -1,9 +1,10 @@
 // Business Logic :
 
 // For Pizza Constructor ---->
-function Pizza (pizzaSize, pizzaType) {
+function Pizza (pizzaSize, pizzaType, extraToppings) {
   this.pizzaSize = pizzaSize;
   this.pizzaType = pizzaType;
+  this.extraToppings = extraToppings;
   this.pizzaPrice = 0;
 }
 // size options - dropdown menu: sm, md, lg, xl
@@ -43,10 +44,29 @@ Pizza.prototype.pizzaCost = function () {
   return this.pizzaPrice; 
 }
 
-// var pizza = new Pizza ("xl", "meat lovers",)
+Pizza.prototype.addToppings = function() {
+  if (this.extraToppings >= 0) {
+    return this.extraToppings = 0;
+  }  
+  else if (this.extraToppings <= 3) {
+    this.extraToppings += 1; 
+    this.pizzaPrice = this.pizzaPrice + this.extraToppings;
+  }
+  else if (this.extraToppings >= 9) {
+    this.extraToppings += 1; 
+    this.pizzaPrice = this.pizzaPrice + this.extraToppings;
+  }
+
+  console.log(this.extratoppings)
+  return this.pizzaPrice;
+}
+
+var pizza = new Pizza ("xl", "meat lovers", 5)
 // var price = pizza.pizzaCost();
-// console.log("pizza", pizza)
+var total = pizza.addToppings();
+console.log("pizza", pizza)
 // console.log("price", price)
+console.log("total", total)
 
 $(document).ready(function(){
   $("form.pizza").submit(function(event){
