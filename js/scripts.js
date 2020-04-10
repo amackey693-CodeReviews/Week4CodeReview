@@ -85,6 +85,7 @@ $(document).ready(function(){
     $("button#submit-order").click(function(){
       $("#order").hide();
       $("#pizza-output").show();
+      $("button#menu").hide();
       $("#pizza-output").html("<h3> Your Total Will Be:  $" + price + ".00 </h3>")
       $("#delivery-info").show();
     });
