@@ -70,6 +70,11 @@ $(document).ready(function(){
     // console.log("price", price)
     // console.log(selectedToppings)
   });
+  
+  $("button#order").click(function(){
+    $("#order").slideToggle();
+  });
+
   $("button#add").click(function(){
     $("#extra-toppings").slideToggle();
   });

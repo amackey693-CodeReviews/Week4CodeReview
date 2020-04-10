@@ -23,9 +23,10 @@ _This application will take allow the user to select a pizza size & type and ret
 
 |   Behavior Description    |  Input Ex.   |        Output Ex.        |  
 |---------------------------|--------------|--------------------------|
-| 1. Create constructor for pizza size & type [ ] |
-| 2. Create a prototype to determine price based off of selections [ ]|
-| 3. Gives user price based off of selections [ ] | 
+| 1. Create constructor for pizza size & type [√] |
+| 2. Create a prototype to determine price based off of selections [√]|
+| 3. Gives user price based off of selections [√] |
+| 4. Allows user to select additional toppings [√] 
 
 ## Known Bugs
 
