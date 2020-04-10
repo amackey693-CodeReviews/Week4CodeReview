@@ -7,12 +7,6 @@ function Pizza (pizzaSize, pizzaType, extraToppings) {
   this.extraToppings = extraToppings;
   this.pizzaPrice = 0;
 }
-// size options - dropdown menu: sm, md, lg, xl
-// type options - dropdown menu: meat lovers, hawaiian, vegetarian, cheese, pepperoni
-// 
-// ADD EXTRA TOPPINGS FUNCTIONALITY LATER:
-// extra toppings - checklist : 10 options total 
-// extraToppings, this.extraToppings = extraToppings;
 
 // for Pizza Pricing ---->
 Pizza.prototype.pizzaCost = function () {
@@ -43,13 +37,23 @@ Pizza.prototype.pizzaCost = function () {
   }
   return this.pizzaPrice; 
 }
-
 // var pizza = new Pizza ("xl", "meat lovers", 5)
 // // var pizzaPrice = pizza.pizzaCost();
 // var total = pizza.addToppings();
 // console.log("pizza", pizza)
 // // console.log("price", price)
 // console.log("total", total)
+
+// Constructor for User Input 
+function InputInfo (firstName, lastName, streetAddress, cityStateZip) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.streetAddress = streetAddress;
+  this.cityStateZip = cityStateZip;
+  this.phoneNumber = phoneNumber;
+}
+
+
 
 $(document).ready(function(){
   $("form.pizza").submit(function(event){
@@ -61,10 +65,7 @@ $(document).ready(function(){
     var price = pizza.pizzaCost();
     $("#output").html("<p> Your Total Will Be:  $" + price + ".00 </p>")
    
-    // $("input:checkbox[name=toppings]:checked").each(function(){
-    //   var num = parseInt($(this).val());
-    //   result += num;
-    // })
+
 
     // console.log("pizza", pizza)
     // console.log("price", price)

@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html>
   <head>
@@ -67,28 +66,37 @@
           <br>
           <br>
           <div id="order">
-            <!-- FORM: User Information for Order -->
-            <form class ="user-input">
+           
+            <form class="pizza">
+               <!-- User Information for Order -->
+              <p>Enter Name:</p>
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="input-name">Your Name :</label>
                     <input type="text" class="form-control" id="first-name" placeholder="First Name">
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group">
-                    <label for="input-name"></label>
                     <input type="text" class="form-control" id="last-name" placeholder="Last Name">
                   </div>
                 </div>  
               </div>
+              <p>Enter Address:</p>
               <div class="row">
-
-
+                <div class="col">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="street-address" placeholder="Street Address">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="last-name" placeholder="City, State, Zip Code">
+                  </div>
+                </div>  
               </div>
-            </form>
-            <form class="pizza">
+              <button type="submit" class ="btn btn-dark"></button>
+          
               <!-- Drop Down Menu for Pizza Size -->
               <label for="pizza-size">What size would you like?</label>
               <select class="form-control" id="pizza-size">
