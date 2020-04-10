@@ -59,12 +59,13 @@
             <h4>Pepperoni</h4>
             <p>Red Sauce, mozzarella, & pepperoni</p>
             <p>Small $16.00 | Medium $18.00 | Large $24.00 | Extra Large $28.00</p>
+
+            <br>
+            <!-- BUTTON : "Place Order" -->
+            <button type="button" id="order-pizza" class = "btn btn-dark">Place An Order!</button>
+            <br>
           </div>
-          <br>
-          <!-- BUTTON : Place Order -->
-          <button type="button" id="order-pizza" class = "btn btn-dark">Place An Order!</button>
-          <br>
-          <br>
+          
           <div id="order">
             <form class="pizza">
                <!-- User Information for Order -->
@@ -116,10 +117,11 @@
                 <option value="meat lovers">Meat Lovers</option>
               </select>
               <br>
-              <!-- Button & Checkbox for Extra Toppings GOES HERE -->
-              <button type="button" id ="add" class="btn btn-dark">Add Extra Toppings</button>
+              <!-- BUTTON for ADD Extra Toppings -->
+              <button type="button" id ="add" class="btn btn-dark">Add Extra Toppings?</button>
               <br>
               <br>
+              <!-- Checkbox list for Extra Toppings -->
               <div id = "extra-toppings">
                 <p>All additional toppings are an extra $1.00</p>
                 <div class="form-check">
@@ -143,7 +145,7 @@
                 </div>
               </div>
               <br>
-              <button type="submit" class="btn btn-dark">Place Your Order!</button>
+              <button type="submit" id= "submit-order" class="btn btn-dark">Submit Your Order</button>
             </form>
           </div>
           <br>

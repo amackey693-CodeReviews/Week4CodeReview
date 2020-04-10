@@ -63,30 +63,34 @@ $(document).ready(function(){
     var selectedToppings = $("input:checkbox[name=toppings]:checked").length;
     var pizza = new Pizza (selectedSize, selectedType, selectedToppings)
     var price = pizza.pizzaCost();
-
-
-    $("#output").html("<p> Your Total Will Be:  $" + price + ".00 </p>")
+    $("button#submit-order").click(function(){
+      $("#order").hide();
+      
+      $("#output").html("<p> Your Total Will Be:  $" + price + ".00 </p>")
    
-
+    });
 
     // console.log("pizza", pizza)
     // console.log("price", price)
     // console.log(selectedToppings)
   });
 
+  // Button for MENU DISPLAY
+  $("button#menu").click(function(){
+    $("#pizza-menu").slideToggle();
+  });
+  // Button for PLACE ORDER
   $("button#order-pizza").click(function(){
     $("#order").slideToggle();
     $("#pizza-menu").slideUp();
     $("button#menu").show();
   });
-  
-  $("button#menu").click(function(){
-    $("#pizza-menu").slideToggle();
-  });
-
+  // Button for EXTRA TOPPINGS
   $("button#add").click(function(){
     $("#extra-toppings").slideToggle();
   });
+  // Button for SUBMIT ORDER
+
 
   
 });
