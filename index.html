@@ -4,10 +4,40 @@
   <head>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title>Transportation Survey</title>
+    <title>Pizza Parlor</title>
   </head>
   <body>
+    <div class="container">
+      <div class="well">  
+        <form class="pizza">
+          <!-- Drop Down Menu for Pizza Size -->
+          <label for="pizza-size">What size would you like?</label>
+          <select class="form-control" id="pizza-size">
+            <option value=""></option>
+            <option value="sm">Small</option>
+            <option value="md">Medium</option>
+            <option value="lg">Large</option>
+            <option value="xl">Extra Large</option>
+          </select>
+          <!-- Drop Down Menu for Pizza Type -->
+          <label for="pizza-type">What kind of pizza would you like?</label>
+          <select class="form-control" id="pizza-type">
+            <option value=""></option>
+            <option value="cheese">Cheese</option>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="hawaiian">Hawaiian</option>
+            <option value="meat lovers">Meat Lovers</option>
+          </select>
+          <br>
+          <button type="submit" class="btn btn-dark">Order Now!</button>
+        </form>
+        <br>
+        <div class="well" id="output">
+
+        </div>
+      </div>
+    </div>
   </body> 
 </html>

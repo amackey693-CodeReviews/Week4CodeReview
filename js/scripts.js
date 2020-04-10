@@ -43,7 +43,21 @@ Pizza.prototype.pizzaCost = function () {
   return this.pizzaPrice; 
 }
 
-var pizza = new Pizza ("xl", "meat lovers",)
-var price = pizza.pizzaCost();
-console.log("pizza", pizza)
-console.log("price", price)
+// var pizza = new Pizza ("xl", "meat lovers",)
+// var price = pizza.pizzaCost();
+// console.log("pizza", pizza)
+// console.log("price", price)
+
+$(document).ready(function(){
+  $("form.pizza").submit(function(event){
+    event.preventDefault()
+    var selectedSize = $("#pizza-size").val();
+    var selectedType  = $("#pizza-type").val();
+    var pizza = new Pizza (selectedSize, selectedType)
+    var price = pizza.pizzaCost();
+    console.log("pizza", pizza)
+    console.log("price", price)
+
+    $("#output").html("<p> Your Total Will Be:  $" + price + ".00 </p>")
+  });
+});
