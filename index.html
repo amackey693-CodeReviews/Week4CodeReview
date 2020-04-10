@@ -32,9 +32,20 @@
           <option value="hawaiian">Hawaiian</option>
           <option value="meat lovers">Meat Lovers</option>
         </select>
+        <br>
         <!-- Button & Checkbox for Extra Toppings GOES HERE -->
+        <button type="button" id ="add" class="btn btn-dark">Click Here Add Toppings</button>
+        <br>
+        <br>
         <div id = "extra-toppings">
-
+          <p>All additional toppings are an extra $1.00, you may select a total of 6 extra topppings: </p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Red Onion<br>
+            <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Olives<br>
+            <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Artichoke Hearts<br>
+            <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Extra Cheese<br>
+            <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Extra Meat<br>
+          </div>
         </div>
         <br>
         <button type="submit" class="btn btn-dark">Order Now!</button>
