@@ -60,13 +60,14 @@ function DeliveryInfo (firstName, lastName, streetAddress, cityStateZip, phoneNu
 $(document).ready(function(){
   $("form.pizza").submit(function(event){
     event.preventDefault()
-    // for pizza info
+    // for pizza info:
     var selectedSize = $("#pizza-size").val();
     var selectedType  = $("#pizza-type").val();
     var selectedToppings = $("input:checkbox[name=toppings]:checked").length;
     var pizza = new Pizza (selectedSize, selectedType, selectedToppings)
     var price = pizza.pizzaCost();
-  
+    
+    // for delivery info:
     var firstName = $("#first-name").val();
     var lastName = $("#last-name").val();
     var phoneNumber = $("#phone-number").val();
@@ -99,7 +100,7 @@ $(document).ready(function(){
   // Button for PLACE ORDER
   $("button#order-pizza").click(function(){
     $("#order").slideToggle("slow");
-    $("#pizza-menu").slideUp("slow");
+    $("#pizza-menu").hide();
     $("button#menu").show();
   });
   // Button for EXTRA TOPPINGS
@@ -109,5 +110,4 @@ $(document).ready(function(){
 });
 
 
-    // // // for delivery info 
-    // function showDeliveryInfo () {
+  
