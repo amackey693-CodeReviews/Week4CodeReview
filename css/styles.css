@@ -21,6 +21,10 @@ body {
   text-align: left;
 }
 
+#menu {
+  display: none;
+}
+
 #extra-toppings {
   display: none;
 }

@@ -17,8 +17,12 @@
             <p><em>Where Pizza Dreams Come True</em></p>
           </div>
           <br>
-          <!-- PIZZA MENU -->
-          <div id= "menu" class ="card">
+          <!-- Button for Menu (only displays once "order-pizza" is clicked) -->
+          <button type="button" id="menu" class = "btn btn-dark">The Menu</button>
+          <br>
+          <br>
+           <!-- PIZZA MENU -->
+          <div id= "pizza-menu" class ="card">
             <h1>The Menu!</h1>
             <div class="col">
               <h4>Pick a Size:</h4>
@@ -39,41 +43,50 @@
             </div>
             <h4>Meat Lovers Pizza</h4>
             <p>Red sauce, mozzarella, pepperoni, canadian style bacon, salami, & fresh italian sausage</p>
+            <p>Small $16.00 | Medium $20.00 | Large $26.00 | Extra Large $30.00</p>
 
             <h4>Hawaiian Style</h4>
             <p>Red Sauce, mozzarella, Canadian-style bacon, pineapple & red onions</p>
+            <p>Small $16.00 | Medium $20.00 | Large $26.00 | Extra Large $30.00</p>
 
             <h4>Vegetarian</h4>
             <p>Red Sauce, mozzarella, black olives, mushrooms, tri-color peppers, red onions, artichoke hearts, & fresh Roma tomatoes</p>
-            <p>Small $18.00 | Medium $20.00 | Large $26.00 | Extra Large $30.00</p>
+            <p>Small $16.00 | Medium $18.00 | Large $24.00 | Extra Large $28.00</p>
 
             <h4>Four - Cheese</h4>
-            <p>Red Sauce, mozzarella, parmesean, gorgonzola, & romano
-            <p>Small $18.00 | Medium $20.00 | Large $26.00 | Extra Large $30.00</p>
+            <p>Red Sauce, mozzarella, parmesean, gorgonzola, & romano</p>
+            <p>Small $16.00 | Medium $18.00 | Large $24.00 | Extra Large $28.00</p>
 
             <h4>Pepperoni</h4>
-            <p>Red Sauce, mozzarella, & pepperoni
-            <p>Small $18.00 | Medium $20.00 | Large $26.00 | Extra Large $30.00</p>
+            <p>Red Sauce, mozzarella, & pepperoni</p>
+            <p>Small $16.00 | Medium $18.00 | Large $24.00 | Extra Large $28.00</p>
           </div>
           <br>
+          <!-- BUTTON : Place Order -->
           <button type="button" id="order-pizza" class = "btn btn-dark">Place An Order!</button>
+          <br>
+          <br>
           <div id="order">
-            <!-- User Information for Order -->
+            <!-- FORM: User Information for Order -->
             <form class ="user-input">
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <label for="input-name">Your Name</label>
-                    <input type="text" class="form-control" id="input-name" placeholder="Enter First & Last Name">
+                    <label for="input-name">Your Name :</label>
+                    <input type="text" class="form-control" id="first-name" placeholder="First Name">
                   </div>
                 </div>
-    
-                <div class="form-group">
-                  <label for="input-name">Your Address</label>
-                  <input type="text" class="form-control" id="input-name" placeholder="Enter First & Last Name">
-                
+                <div class="col">
+                  <div class="form-group">
+                    <label for="input-name"></label>
+                    <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                  </div>
+                </div>  
               </div>
-             </div>
+              <div class="row">
+
+
+              </div>
             </form>
             <form class="pizza">
               <!-- Drop Down Menu for Pizza Size -->
@@ -102,13 +115,23 @@
               <div id = "extra-toppings">
                 <p>All additional toppings are an extra $1.00, you may select a total of 6 extra topppings: </p>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Red Onion<br>
-                  <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Olives<br>
-                  <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Artichoke Hearts<br>
-                  <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Pinapple<br>
-                  <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Bell Peppers<br>
-                  <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Extra Cheese<br>
-                  <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Extra Meat<br>
+                  <div class="row">
+                    <div class="col">
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Red Onion<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Olives<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Artichoke Hearts<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Pinapple<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Banana Peppers<br>
+                    </div>
+                
+                    <div class="col">
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Bell Peppers<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Mushrooms<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Jalepenos<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Extra Cheese<br>
+                      <input class="form-check-input" type="checkbox" name= "toppings" value="1" id="defaultCheck1">Extra Meat<br>
+                    </div>
+                  </div>
                 </div>
               </div>
               <br>

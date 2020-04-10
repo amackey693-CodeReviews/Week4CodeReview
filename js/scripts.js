@@ -70,10 +70,16 @@ $(document).ready(function(){
     // console.log("price", price)
     // console.log(selectedToppings)
   });
-  
-  $("button#order").click(function(){
+
+  $("button#order-pizza").click(function(){
     $("#order").slideToggle();
+    $("#pizza-menu").slideUp();
+    $("button#menu").show();
   });
+  $("button#menu").click(function(){
+    $("#pizza-menu").slideToggle();
+  });
+
 
   $("button#add").click(function(){
     $("#extra-toppings").slideToggle();
