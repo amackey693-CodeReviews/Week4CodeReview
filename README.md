@@ -21,12 +21,15 @@ _This application will take allow the user to select a pizza size & type and ret
 ## Behavior Driven Development 
 
 
-|   Behavior Description    |  Input Ex.   |        Output Ex.        |  
-|---------------------------|--------------|--------------------------|
+|   Behavior Description        |  
+|-------------------------------|
 | 1. Create constructor for pizza size & type [√] |
 | 2. Create a prototype to determine price based off of selections [√]|
 | 3. Gives user price based off of selections [√] |
-| 4. Allows user to select additional toppings [√] 
+| 4. Allows user to select additional toppings [√] |
+| 5. Allows user to input address [√]
+| 6. Displays total price & delivery information to user once they submit their order [√]|
+| 7. Allows user to order more than one pizza & displays order to them [X] |
 
 ## Known Bugs
 
