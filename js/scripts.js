@@ -45,7 +45,7 @@ Pizza.prototype.pizzaCost = function () {
 // console.log("total", total)
 
 // Constructor for User Input 
-function DeliveryInfo (firstName, lastName, streetAddress, cityStateZip) {
+function DeliveryInfo (firstName, lastName, streetAddress, cityStateZip, phoneNumber) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.streetAddress = streetAddress;
@@ -54,10 +54,19 @@ function DeliveryInfo (firstName, lastName, streetAddress, cityStateZip) {
 }
 
 
+
+
+
 $(document).ready(function(){
   $("form.pizza").submit(function(event){
     event.preventDefault()
-    for delivery info 
+    // for pizza info
+    var selectedSize = $("#pizza-size").val();
+    var selectedType  = $("#pizza-type").val();
+    var selectedToppings = $("input:checkbox[name=toppings]:checked").length;
+    var pizza = new Pizza (selectedSize, selectedType, selectedToppings)
+    var price = pizza.pizzaCost();
+  
     var firstName = $("#first-name").val();
     var lastName = $("#last-name").val();
     var phoneNumber = $("#phone-number").val();
@@ -65,16 +74,17 @@ $(document).ready(function(){
     var cityStateZip = $("#city-state-zip").val();
     var deliveryInfo = new DeliveryInfo (firstName, lastName, phoneNumber, streetAddress, cityStateZip)
 
-    // for pizza info
-    var selectedSize = $("#pizza-size").val();
-    var selectedType  = $("#pizza-type").val();
-    var selectedToppings = $("input:checkbox[name=toppings]:checked").length;
-    var pizza = new Pizza (selectedSize, selectedType, selectedToppings)
-    var price = pizza.pizzaCost();
+    $(".first-name").html(firstName);
+    $(".last-name").html(lastName);
+    $(".phone-number").html(phoneNumber);
+    $(".street-address").html(streetAddress);
+    $(".city-state-zip").html(cityStateZip);
+    
     // Button for SUBMITTING ORDER
     $("button#submit-order").click(function(){
       $("#order").hide();
       $("#pizza-output").html("<p> Your Total Will Be:  $" + price + ".00 </p>")
+      $("#delivery-info").show();
     });
 
     // console.log("pizza", pizza)
@@ -84,16 +94,20 @@ $(document).ready(function(){
 
   // Button for MENU DISPLAY
   $("button#menu").click(function(){
-    $("#pizza-menu").slideToggle();
+    $("#pizza-menu").slideToggle("slow");
   });
   // Button for PLACE ORDER
   $("button#order-pizza").click(function(){
-    $("#order").slideToggle();
-    $("#pizza-menu").slideUp();
+    $("#order").slideToggle("slow");
+    $("#pizza-menu").slideUp("slow");
     $("button#menu").show();
   });
   // Button for EXTRA TOPPINGS
   $("button#add").click(function(){
-    $("#extra-toppings").slideToggle();
+    $("#extra-toppings").slideToggle("slow");
   });
 });
+
+
+    // // // for delivery info 
+    // function showDeliveryInfo () {
