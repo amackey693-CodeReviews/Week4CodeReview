@@ -18,37 +18,31 @@ function Pizza (pizzaSize, pizzaType, extraToppings) {
 Pizza.prototype.pizzaCost = function () {
   // for extra large pizzas 
   if ((this.pizzaSize === "xl" && this.pizzaType === "meat lovers" || this.pizzaSize === "xl" && this.pizzaType === "hawaiian" )) {
-    this.pizzaPrice = 30;
+    this.pizzaPrice = 30 + this.extraToppings;
   } 
   else if ((this.pizzaSize === "xl" && this.pizzaType === "vegetarian" || this.pizzaSize === "xl" && this.pizzaType === "cheese" || this.pizzaSize === "xl" && this.pizzaType === "pepperoni")) {
-    this.pizzaPrice = 28;
+    this.pizzaPrice = 28 + this.extraToppings;
   }
   // for large pizzas 
   if ((this.pizzaSize === "lg" && this.pizzaType === "meat lovers" || this.pizzaSize === "lg" && this.pizzaType === "hawaiian" )) {
-    this.pizzaPrice = 26;
+    this.pizzaPrice = 26 + this.extraToppings;
   } 
   else if ((this.pizzaSize === "lg" && this.pizzaType === "vegetarian" || this.pizzaSize === "lg" && this.pizzaType === "cheese" || this.pizzaSize === "lg" && this.pizzaType === "pepperoni")) {
-    this.pizzaPrice = 24;
+    this.pizzaPrice = 24 + this.extraToppings;
   }
   // for medium pizzas 
   if ((this.pizzaSize === "md" && this.pizzaType === "meat lovers" || this.pizzaSize === "md" && this.pizzaType === "hawaiian" )) {
-    this.pizzaPrice = 20;
+    this.pizzaPrice = 20 + this.extraToppings;
   } 
   else if ((this.pizzaSize === "md" && this.pizzaType === "vegetarian" || this.pizzaSize === "md" && this.pizzaType === "cheese" || this.pizzaSize === "md" && this.pizzaType === "pepperoni")) {
-    this.pizzaPrice = 18;
+    this.pizzaPrice = 18 + this.extraToppings;
   }
   // for small pizzas
   if ((this.pizzaSize === "sm" && this.pizzaType === "meat lovers" || this.pizzaSize === "sm" && this.pizzaType === "hawaiian" || this.pizzaSize === "sm" && this.pizzaType === "vegetarian" || this.pizzaSize === "sm" && this.pizzaType === "cheese" || this.pizzaSize === "sm" && this.pizzaType === "pepperoni")) {
-    this.pizzaPrice = 16;
+    this.pizzaPrice = 16 + this.extraToppings;
   }
   return this.pizzaPrice; 
 }
-
-Pizza.prototype.addToppings = function(){
-  this.pizzaPrice = this.extraToppings + this.pizzaPrice;
-}
-
-
 
 // var pizza = new Pizza ("xl", "meat lovers", 5)
 // // var pizzaPrice = pizza.pizzaCost();
@@ -74,11 +68,10 @@ $(document).ready(function(){
 
     // console.log("pizza", pizza)
     // console.log("price", price)
-    console.log(selectedToppings)
+    // console.log(selectedToppings)
   });
   $("button#add").click(function(){
-    $("#extra-toppings").slideToggle()
-    
+    $("#extra-toppings").slideToggle();
   });
 
   
