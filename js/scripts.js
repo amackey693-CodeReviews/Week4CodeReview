@@ -63,6 +63,8 @@ $(document).ready(function(){
     var selectedToppings = $("input:checkbox[name=toppings]:checked").length;
     var pizza = new Pizza (selectedSize, selectedType, selectedToppings)
     var price = pizza.pizzaCost();
+
+
     $("#output").html("<p> Your Total Will Be:  $" + price + ".00 </p>")
    
 
