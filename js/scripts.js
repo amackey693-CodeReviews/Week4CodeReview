@@ -79,10 +79,10 @@ $(document).ready(function(){
     $("#pizza-menu").slideUp();
     $("button#menu").show();
   });
+  
   $("button#menu").click(function(){
     $("#pizza-menu").slideToggle();
   });
-
 
   $("button#add").click(function(){
     $("#extra-toppings").slideToggle();
