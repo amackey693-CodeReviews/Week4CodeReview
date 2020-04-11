@@ -55,8 +55,6 @@ function DeliveryInfo (firstName, lastName, streetAddress, cityStateZip, phoneNu
 
 
 
-
-
 $(document).ready(function(){
   $("form.pizza").submit(function(event){
     event.preventDefault()
